@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FBE38738-161C-43C4-810E-EFF9D27E47E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SqlTestDriven</RootNamespace>
+    <AssemblyName>SqlTestDriven</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\Andable.cs" />
+    <Compile Include="Contracts\DatabaseExtensions.cs" />
+    <Compile Include="Contracts\IAnd.cs" />
+    <Compile Include="Contracts\IApplyNamingConventions.cs" />
+    <Compile Include="Contracts\IColumnAssertable.cs" />
+    <Compile Include="Contracts\ICore.cs" />
+    <Compile Include="Contracts\IDatabaseAssertable.cs" />
+    <Compile Include="Contracts\IDbObject.cs" />
+    <Compile Include="Contracts\IDbObjectType.cs" />
+    <Compile Include="Contracts\IIt.cs" />
+    <Compile Include="Contracts\INamed.cs" />
+    <Compile Include="Contracts\INamedItemParent.cs" />
+    <Compile Include="Contracts\Itable.cs" />
+    <Compile Include="Contracts\ITableAssertable.cs" />
+    <Compile Include="Contracts\IThen.cs" />
+    <Compile Include="Contracts\IWhich.cs" />
+    <Compile Include="Contracts\IWhichAndable.cs" />
+    <Compile Include="Contracts\IWhichOrThen.cs" />
+    <Compile Include="Contracts\TableExtensions.cs" />
+    <Compile Include="Contracts\Whichable.cs" />
+    <Compile Include="Contracts\WhichAndable.cs" />
+    <Compile Include="Expectations\DatabaseExistsExpectation.cs" />
+    <Compile Include="Expectations\SchemaExistsExpectation.cs" />
+    <Compile Include="Expectations\TableExistsExpectation.cs" />
+    <Compile Include="Extensions\CoreExtensions.cs" />
+    <Compile Include="Model\Assertable.cs" />
+    <Compile Include="AssertionFailure.cs" />
+    <Compile Include="Expectations\ColumnExistsExpectation.cs" />
+    <Compile Include="Expectations\ColumnTypeExpectation.cs" />
+    <Compile Include="Expectations\Expectation.cs" />
+    <Compile Include="GetActualObjectExtensions.cs" />
+    <Compile Include="GivenTheDatabaseToTest.cs" />
+    <Compile Include="Model\ClusteredIndex.cs" />
+    <Compile Include="Model\Column.cs" />
+    <Compile Include="Model\ColumnDefault.cs" />
+    <Compile Include="Model\Database.cs" />
+    <Compile Include="Model\DbObject.cs" />
+    <Compile Include="Model\View.cs" />
+    <Compile Include="SqlTestDriven.cs" />
+    <Compile Include="TestRun.cs" />
+    <Compile Include="Model\Index.cs" />
+    <Compile Include="Expectations\NamedItemExpectation.cs" />
+    <Compile Include="Expectations\ObjectExistsExpectation.cs" />
+    <Compile Include="Expectations\PrimaryKeyExpectation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Schema.cs" />
+    <Compile Include="Model\SqlServer.cs" />
+    <Compile Include="Model\Table.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
