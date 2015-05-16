@@ -1,7 +1,0 @@
-D:\work\SQLUnitTestGenerator\SQLUnitTestGenerator\SqlTestDriven.Tests\bin\Debug\SqlTestDriven.Tests.dll
-D:\work\SQLUnitTestGenerator\SQLUnitTestGenerator\SqlTestDriven.Tests\bin\Debug\SqlTestDriven.Tests.pdb
-D:\work\SQLUnitTestGenerator\SQLUnitTestGenerator\SqlTestDriven.Tests\bin\Debug\SqlTestDriven.dll
-D:\work\SQLUnitTestGenerator\SQLUnitTestGenerator\SqlTestDriven.Tests\bin\Debug\SqlTestDriven.pdb
-D:\work\SQLUnitTestGenerator\SQLUnitTestGenerator\SqlTestDriven.Tests\obj\Debug\SqlTestDriven.Tests.csprojResolveAssemblyReference.cache
-D:\work\SQLUnitTestGenerator\SQLUnitTestGenerator\SqlTestDriven.Tests\obj\Debug\SqlTestDriven.Tests.dll
-D:\work\SQLUnitTestGenerator\SQLUnitTestGenerator\SqlTestDriven.Tests\obj\Debug\SqlTestDriven.Tests.pdb
